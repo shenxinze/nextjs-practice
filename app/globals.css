@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #111;
+  color: #bbb;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.light {
+  background-color: white;
+  color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
+.theme {
+  transition: all 1s ease;
+}
+
+@layer components {
+  .input-style {
+    @apply p-5 bg-transparent outline-none text-[#bbb] border-[3px] border-[#bbb] text-xl font-bold
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(0px) scale(1.03);
+  }
+}
+
+@layer utilities {
+  /* .img-animate {
+    @apply animate-[move] duration-[3000] infinite ease animate-alternate
+  } */
+}
+
